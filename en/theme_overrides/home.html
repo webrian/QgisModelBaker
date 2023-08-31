@@ -1,0 +1,49 @@
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+  @media screen and (min-width:60em) {
+    .md-sidebar--secondary {
+      display: none
+    }
+  }
+
+  @media screen and (min-width:76.25em) {
+    .md-sidebar--primary {
+      display: none
+    }
+  }
+</style>
+<section>
+  <div class="md-grid md-typeset">
+    <div>
+      <div>
+        <p></p>
+        <img src="{{ base_url }}/assets/modelbaker_logo_long.svg" alt="QGIS Model Baker">
+        <p>
+          Model Baker is a <a href="https://plugins.qgis.org/plugins/QgisModelBaker/">QGIS plugin</a> that allows to
+          quickly create a QGIS project from a physical data model. Moreover it lets you import, export, and validate <a
+            href="https://www.interlis.ch/en">INTERLIS</a> models and data into QGIS using graphical control of the <a
+            href="https://github.com/claeis/ili2db/blob/master/docs/ili2db.rst">ili2db</a> tools.
+        </p>
+        <p>
+          Model Baker uses <a href="https://github.com/claeis/ili2db/blob/master/docs/ili2db.rst">ili2db</a> to import
+          an INTERLIS model into a physical database and the database structure as well as the provided metainformation
+          to configure the QGIS project with layer tree, field widgets, form layouts, relations and much more. This
+          automation can massively reduce the configuration effort.
+        </p>
+        <p>
+          Furthermore, Model Baker can be used as a <a
+            href="https://opengisch.github.io/QgisModelBaker/development/">framework</a> for other projects. The plugin
+          <a href="https://github.com/SwissTierrasColombia/Asistente-LADM-COL">Asistente LADM-COL</a>, created for the
+          <a href="https://www.proadmintierra.info/">Colombian implementation of the Land Administration Domain Model
+            (LADM)</a>, uses the backend of <a href="https://pypi.org/project/modelbaker/">Model Baker as a library</a>
+          to implement as much of the specific solution as possible as QGIS core functionality.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
